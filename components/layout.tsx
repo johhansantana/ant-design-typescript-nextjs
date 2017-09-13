@@ -1,9 +1,9 @@
 import * as React from 'react'
 import Head from 'next/head';
 import CSSTag from './CSSTag';
-let home
+let antd
 if (process.env.NODE_ENV !== 'production') {
-  home = require('!/styles/home.scss')
+  antd = require('!/styles/antd.scss')
 }
 
 interface State {
@@ -42,7 +42,7 @@ class Layout extends React.Component {
             <link rel="stylesheet" href="/static/css/app.css" />
           }
         </Head>
-        <CSSTag style={home} />
+        <CSSTag style={antd} />
 
         {children}
 
